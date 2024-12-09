@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY</title>
+</head>
+<body>
+    <p id="abc"></p>
+    <script>
+        const a=[12,34,67,89]
+        document.write(a[0]);
+        for(let i=0;i<4;i++){
+            document.write(a[i]+"<br>")
+        }
+        for(let i in a){
+            document.write(a[i]+"<br>")
+        }
+        let sum=0;
+        for(i=0;i<4;i++){
+            sum=sum+a[i];
+        }
+        document.write("sum of a:"+sum);
+    </script>
+</body>
+</html>
