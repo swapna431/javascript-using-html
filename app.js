@@ -1,11 +1,15 @@
-const express = require('express');
-const app = express();
-const port = 3000;
-
-app.get('/api/test', (req, res) => {
-    res.send({ message: 'Hello from the API!' });
-});
-
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
-});
+const express=require('express')
+const dotenv=require('dotenv')
+const mongoose=require('mongoose')
+const app=express()
+dotenv.config()
+mongoose.connect(process.env.URI)
+.then(()=>{
+    console.log("Database connectes")
+})
+.catch((err)=>{
+    console.log("error in connecting with database",err)
+})
+app.listen(5050,()=>{
+    console.log("server started")
+})
