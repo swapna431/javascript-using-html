@@ -1,0 +1,6 @@
+const path=require('path')
+console.log(path.dirname(--filename))
+console.log(path.basename(--filename))
+console.log(path.extname(--filename))
+console.log(path.delimiter)
+console.log(path.parse(--filename))
